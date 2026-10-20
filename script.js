@@ -14,7 +14,7 @@ function startRound() {
         const card = document.createElement("div");
         card.classList.add("card");
         card.dataset.icon = icon;
-        card.textContent = "icon";
+        card.textContent = icon;
         card.addEventListener("click",() => flipCard(card));
         board.appendChild(card);
     });
@@ -27,9 +27,7 @@ function startRound() {
         if (flipped.length === 2) {
             lock = true;
             setTimeout(checkMatch,600);
-
         }
-
     }
     function checkMatch() {
         const[a, b] = flipped;
